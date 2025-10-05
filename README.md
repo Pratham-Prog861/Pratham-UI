@@ -1,73 +1,94 @@
-# React + TypeScript + Vite
+# 🚀 Pratham UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, lightweight React component library built with TypeScript and TailwindCSS. Pratham UI provides essential components for building clean, consistent user interfaces.
 
-Currently, two official plugins are available:
+![Pratham UI](https://img.shields.io/badge/Pratham-UI-blue)
+![React](https://img.shields.io/badge/React-18-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.2-blue)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3-blue)
+![Storybook](https://img.shields.io/badge/Storybook-7.6-ff69b4)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- 📦 **Modern Stack**: Built with React 18, TypeScript, and Vite
+- 🎨 **Customizable**: Styled with TailwindCSS and class-variance-authority
+- 📚 **Interactive Documentation**: Component playground with Storybook
+- 🧩 **Modular Components**: Consistent API across all components
+- 🔍 **Type Safety**: Full TypeScript support
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📋 Components
 
-## Expanding the ESLint configuration
+- **Button**: Customizable buttons with different variants, sizes, and color schemes
+- **Input**: Form input components with validation states
+- **Text**: Typography components for consistent text styling
+- **Layout**: Flexible layout components (Box, Stack)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install pratham-ui
+# or
+yarn add pratham-ui
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Usage
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```jsx
+import { Button, Input, Stack } from 'pratham-ui';
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+function App() {
+  return (
+    <Stack spacing="md">
+      <Input placeholder="Enter your name" />
+      <Button>Submit</Button>
+    </Stack>
+  );
+}
 ```
+
+## 📖 Documentation
+
+Run Storybook locally to view interactive component documentation:
+
+```bash
+npm run storybook
+# or
+yarn storybook
+```
+
+## 🛠️ Development
+
+### Prerequisites
+
+- Node.js (v16+)
+- npm or yarn
+
+### Setup
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn
+   ```
+3. Start Storybook:
+   ```bash
+   npm run storybook
+   # or
+   yarn storybook
+   ```
+
+### Building
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+---
+
+Made with ❤️ by Pratham
